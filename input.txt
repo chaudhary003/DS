@@ -1,0 +1,6 @@
+This is stack a very use full data structure
+there are a lot of real time application of stack
+1. function calling
+2. reversing the data
+3. html tags
+and many mores 

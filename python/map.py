@@ -92,7 +92,7 @@ class ChainHashTable(HashTableBase):
             if bucket is not None:
                 for key in bucket:
                     yield key
-class ProbeHashMap:
+class ProbeHashMap(HashTableBase):
     _Avail= object()
     def _is_available(self,j):
         return self._table[j] is None or self._table[j] is ProbeHashMap._Avail

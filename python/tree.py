@@ -211,7 +211,7 @@ class LinkedBinaryTree(BinaryTree):
             raise ValueError if p is not valid or p has two children
             and return the element that had been stored at position P'''
         node =self._validate(p)
-        if self.num_childern()==0: raise ValueError(" p  has two children")
+        if self.num_childern()==2: raise ValueError(" p  has two children")
         child =node._left if node._left else node._right
         if child is not None:
             child._parent=node._parent

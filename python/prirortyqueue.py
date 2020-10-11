@@ -27,7 +27,7 @@ class UnsortedPriortyQueue(PriortyQueueBase):
             if move.element()< min.element():
                 min=move
             move=self._data.after(move)
-            return min
+        return min
         def min(self):
             '''return but not remove (k,v)'''
             p=self._find_min()
@@ -80,9 +80,6 @@ class PriorityQlist(PriortyQueueBase):
         item=self._data(index)
         return (item._key,item._value)
 
-
-
-
 class HeapPriortyQueue(PriortyQueueBase):
     ''' A min ordered priorty queue based on binary heap'''
     def __init__(self):
@@ -128,7 +125,7 @@ class HeapPriortyQueue(PriortyQueueBase):
     def remove_min(self):
         if self.is_empty():
             raise Empty('queue is empty')
-            self._swap(0,len(self._data)-1)
-            item=self._data.pop()
-            self._downheap(0)
-            return item._key, item._value
+        self._swap(0,len(self._data)-1)
+        item=self._data.pop()
+        self._downheap(0)
+        return item._key, item._value
